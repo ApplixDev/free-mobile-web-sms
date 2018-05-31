@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+# Important
 
-You can use the [editor on GitHub](https://github.com/ApplixDev/free-mobile-web-sms/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+<div style="text-align:center"><img src ="http://mobile.free.fr/images/logo.png" /></div>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![image-title-here](http://mobile.free.fr/images/logo.png){:class="img-responsive"}
 
-### Markdown
+![Image](http://mobile.free.fr/images/logo.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Cette application est destinée uniquement aux clients de l'opérateur téléphonique français Free Mobile, elle permet d'envoyer des notifications par sms vers votre numéro.
 
-```markdown
-Syntax highlighted code block
+## Paramétrage 
 
-# Header 1
-## Header 2
-### Header 3
+Pour pouvoir utiliser cette application vous devez au préalable activer l'option de notification sur votre [compte free mobile](https://mobile.free.fr/moncompte). Les étapes à suivre sont décrites dans cet [article](https://perhonen.fr/blog/2015/07/envoyer-des-notifications-par-sms-via-free-mobile-1029).
 
-- Bulleted
-- List
+une fois que vous avez obtenu votre
+`identifiant` et votre `code secret`, vous devez ensuite les saisir dans les champs indiqués sur cette application web.
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ApplixDev/free-mobile-web-sms/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+>Il est conseillé de copier directement vos identifiants depuis votre compte free afin d'éviter toute erreur lors de la saisie.
