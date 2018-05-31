@@ -1,12 +1,6 @@
-# Important
-
 <div style="text-align:center"><img src ="http://mobile.free.fr/images/logo.png" /></div>
 
-![image-title-here](http://mobile.free.fr/images/logo.png){:class="img-responsive"}
-
-![Image](http://mobile.free.fr/images/logo.png)
-
-Cette application est destinée uniquement aux clients de l'opérateur téléphonique français Free Mobile, elle permet d'envoyer des notifications par sms vers votre numéro.
+Cette application est destinée uniquement aux clients de l'opérateur téléphonique français [Free Mobile](https://mobile.free.fr/moncompte), elle permet d'envoyer des notifications par sms vers votre numéro free.
 
 ## Paramétrage 
 
