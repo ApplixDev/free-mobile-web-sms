@@ -1,8 +1,11 @@
+---
+---
+
 $(document).ready(function() {
     //use cors proxy for cross domain requests
     $.ajaxPrefilter(function(options) {
-        if (jQuery.support.cors && options.crossDomain) {
-            options.url = (window.location.protocol === 'http:' ? 'http:' : 'https:') + '//unicorn-cors-proxy.herokuapp.com/' + options.url;
+        if ($.support.cors && options.crossDomain) {
+            options.url = (window.location.protocol === 'http:' ? 'http:' : 'https:') + '//cors.io/?' + options.url;
         }
     });
   
