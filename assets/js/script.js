@@ -38,7 +38,7 @@ $(document).ready(function() {
     $('.form').on('submit', function(e) {
         e.preventDefault();
         $.ajax({
-            url : 'https://smsapi.free-mobile.fr/sendmsg',
+            url : 'https://smsapi.free-mobile.fr/sendmsg?',
             type: "GET",
             data: $(this).serialize(),
             success: function (data) {
