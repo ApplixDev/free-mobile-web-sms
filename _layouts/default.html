@@ -24,12 +24,12 @@
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
 
-		<form class="form">
+		<form class="form" method="post" action="https://smsapi.free-mobile.fr/sendmsg">
 
 			<div class="form__wrapper">
-				<input type="text" class="form__input" id="identifier" name="user">
-				<label class="form__label" for="identifier">
-					<span class="form__label-content">Identifiant</span>
+				<input type="text" class="form__input" id="userID" name="user">
+				<label class="form__label" for="userID">
+					<span class="form__label-content">Identifiant free</span>
 				</label>
 			</div>
 
@@ -49,7 +49,7 @@
 
 			<div class="form__wrapper--submit">
 				<div class="form__input-submit">
-			        	<button type="submit" class="btn submit">Envoyer</button>
+			        	<button id="submit" type="submit" class="btn submit">Envoyer</button>
 				</div>
 			</div>
 		</form>
