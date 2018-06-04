@@ -43,7 +43,7 @@
                 type: 'GET',
                 data: form.serialize(),
                 beforeSend: function() {
-                    submitButton.html('Envoi en cours....');
+                    submitButton.val('Envoi en cours....');
                 },
                 success: function(data) {
                     form.trigger('reset');
