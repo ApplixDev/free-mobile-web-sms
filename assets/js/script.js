@@ -37,7 +37,6 @@
             var form = $(".form");
             var submitButton = $("#submit");
 
-
             $.ajax({
                 url: 'https://smsapi.free-mobile.fr/sendmsg?',
                 type: 'GET',
@@ -46,41 +45,18 @@
                     submitButton.val('Envoi en cours....');
                 },
                 success: function(data) {
+                    swal("Message envoyé.", "", "success");
                     form.trigger('reset');
                     submitButton.val('Envoyer');
                 },
                 error: function(e) {
+                    swal("Erreur!", "Votre message n\'a pas été envoyé.", "error");
                     submitButton.val('Envoyer');
-                    alert('Erreur, votre message n\'a pas été envoyé.');
                 }
             });
 
+        }
 
-        } // end submit handler
-
-
-    }); //end validate
-
-    /*$('.form').on('submit', function(e) {
-        e.preventDefault();
-	if ($(this).validate({})) {
-        $.ajax({
-            url : 'https://smsapi.free-mobile.fr/sendmsg?',
-            type: "GET",
-            data: $(this).serialize(),
-            success: function (data) {
-                // Clear the form
-                $(':input', '.form')
-                .not(':button, :submit, :reset, :hidden')
-                .val('')
-                .removeAttr('checked')
-                .removeAttr('selected');
-            },
-            error: function() {
-              alert('Erreur, votre message n\'a pas été envoyé.');
-            }
-        });
-	}
-    });*/
+    });
 
 });
