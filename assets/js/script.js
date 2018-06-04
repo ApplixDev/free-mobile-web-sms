@@ -15,7 +15,8 @@
         }
     });
 
-    $('.form').validate({
+    $(".form").validate({
+
         rules: {
             user: {
                 required: true,
@@ -29,11 +30,33 @@
                 required: true,
                 maxlength: 480
             }
-        }
-    });
+        },
+
+        submitHandler: function(form) {
+
+            var form = $(".form");
+
+            $.ajax({
+                url: 'https://smsapi.free-mobile.fr/sendmsg?',
+                type: 'GET',
+                data: form.serialize(), 
+                success: function(data) {
+                    form.trigger('reset');
+                },
+                error: function(e) {
+                    alert('Erreur, votre message n\'a pas été envoyé.');
+                }
+            });
+
+
+        } // end submit handler
+
+
+    }); //end validate
 
     /*$('.form').on('submit', function(e) {
         e.preventDefault();
+	if ($(this).validate({})) {
         $.ajax({
             url : 'https://smsapi.free-mobile.fr/sendmsg?',
             type: "GET",
@@ -50,33 +73,32 @@
               alert('Erreur, votre message n\'a pas été envoyé.');
             }
         });
+	}
     });*/
 
-    $('.form').on('submit', function(e) {
-        
-        $('.form').validate({
-            submitHandler: function(form) {
-		e.preventDefault();
-                $.ajax({
-                    url: 'https://smsapi.free-mobile.fr/sendmsg?',
-                    type: "GET",
-                    data: $(this).serialize(),
-                    success: function(data) {
-                        // Clear the form
-                        $(':input', '.form')
-                            .not(':button, :submit, :reset, :hidden')
-                            .val('')
-                            .removeAttr('checked')
-                            .removeAttr('selected');
-                        return false;
-                    },
-                    error: function() {
-                        alert('Erreur, votre message n\'a pas été envoyé.');
-                    }
-                });
-                return false;
-            }
-        });
-    });
+
+
+    /*$('.form').validate({
+        submitHandler: function(form) {
+            $.ajax({
+                url: 'https://smsapi.free-mobile.fr/sendmsg?',
+                type: "GET",
+                data: $(this).serialize(),
+                success: function(data) {
+                    // Clear the form
+                    $(':input', '.form')
+                .not(':button, :submit, :reset, :hidden')
+                .val('')
+                .removeAttr('checked')
+                .removeAttr('selected');
+		return false;
+                },
+                error: function() {
+                    alert('Erreur, votre message n\'a pas été envoyé.');
+                }
+            });
+            return false;
+        }
+    });*/
 
 });
